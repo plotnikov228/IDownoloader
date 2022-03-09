@@ -1,8 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 using EventAndDelegateHomeWork.InterfaceForStudent;
 
 namespace EventAndDelegateHomeWork
@@ -31,6 +32,7 @@ namespace EventAndDelegateHomeWork
 
                 for (int i = 0; n < a1; i++)
                 {
+                    Thread.Sleep(1000);
                     a = rand.Next(100);
                     file.Error(a);
                     Console.WriteLine("-Скорость-");
@@ -44,7 +46,9 @@ namespace EventAndDelegateHomeWork
                     }
                     Console.WriteLine("-Скачано-");
                     Console.WriteLine(n);
+                    Console.WriteLine(" ");
                     file.Complete(n);
+                    
                 }
             }
 
